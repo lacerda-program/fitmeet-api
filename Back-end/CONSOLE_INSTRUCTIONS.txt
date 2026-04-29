@@ -1,0 +1,63 @@
+## 📝 What to Put in console.sql
+
+I've created a comprehensive SQL file for you! Here's what you should do:
+
+### 1. **Copy the SQL Commands**
+The file `console.sql` in your project root now contains SQL commands to:
+- ✅ Test database connection
+- ✅ List all tables
+- ✅ Check table structures
+- ✅ View sample data
+- ✅ Test relationships
+- ✅ Monitor database health
+
+### 2. **Configure IntelliJ Database Connection**
+Before running the SQL:
+
+1. **Open Database Tool Window** (View → Tool Windows → Database)
+2. **Add New Data Source** (+ button → PostgreSQL)
+3. **Configure Connection**:
+   - **Host**: localhost
+   - **Port**: 5432
+   - **Database**: bootcamp_db
+   - **User**: postgres
+   - **Password**: postgres
+4. **Test Connection** (should show green checkmark)
+
+### 3. **Run the SQL Commands**
+- Open `console.sql` in IntelliJ
+- Make sure your database connection is selected
+- Run individual statements or the entire file
+
+### 4. **What You'll See**
+After Spring Boot runs migrations, you'll see:
+- 8 tables created
+- 5 activity types pre-loaded
+- Proper foreign key relationships
+- Indexes for performance
+
+### 5. **Quick Test Commands**
+If you want to start simple, just run these:
+
+```sql
+-- Check connection
+SELECT 'Database connected!' as status;
+
+-- List tables
+SELECT table_name FROM information_schema.tables
+WHERE table_schema = 'public' ORDER BY table_name;
+
+-- Check activity types (should show 5 rows after migrations)
+SELECT name, description FROM activity_types ORDER BY name;
+```
+
+### 6. **Expected Results**
+- **Before Spring Boot**: Empty database
+- **After Spring Boot**: 8 tables with relationships and seed data
+
+### 7. **Troubleshooting**
+- **Connection failed**: Make sure `docker-compose up -d` is running
+- **No tables**: Run Spring Boot first (`gradlew.bat bootRun`)
+- **Port issues**: Check if 5432 is available
+
+The `console.sql` file is ready to use! Just open it in IntelliJ and run the commands.
