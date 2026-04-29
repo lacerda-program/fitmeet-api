@@ -20,14 +20,7 @@
                              foreignKeyName="fk_user_achievements_achievement"
                              references="achievements(id)"/>
             </column>
-            <column name="unlocked_at" type="TIMESTAMP" defaultValueComputed="now()">
-                <constraints nullable="false"/>
-            </column>
         </createTable>
-
-        <addUniqueConstraint tableName="user_achievements"
-                            columnNames="user_id,achievement_id"
-                            constraintName="uk_user_achievement"/>
     </changeSet>
 
 </databaseChangeLog>

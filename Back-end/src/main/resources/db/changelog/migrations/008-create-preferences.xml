@@ -11,24 +11,14 @@
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="user_id" type="UUID">
-                <constraints nullable="false" unique="true"
+                <constraints nullable="false"
                              foreignKeyName="fk_preferences_user"
                              references="users(id)"/>
             </column>
-            <column name="theme" type="VARCHAR(50)" defaultValue="LIGHT">
-                <constraints nullable="false"/>
-            </column>
-            <column name="notifications_enabled" type="BOOLEAN" defaultValueBoolean="true">
-                <constraints nullable="false"/>
-            </column>
-            <column name="email_notifications" type="BOOLEAN" defaultValueBoolean="true">
-                <constraints nullable="false"/>
-            </column>
-            <column name="created_at" type="TIMESTAMP" defaultValueComputed="now()">
-                <constraints nullable="false"/>
-            </column>
-            <column name="updated_at" type="TIMESTAMP" defaultValueComputed="now()">
-                <constraints nullable="false"/>
+            <column name="type_id" type="UUID">
+                <constraints nullable="false"
+                             foreignKeyName="fk_preferences_type"
+                             references="activity_types(id)"/>
             </column>
         </createTable>
     </changeSet>

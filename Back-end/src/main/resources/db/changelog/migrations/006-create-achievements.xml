@@ -13,15 +13,36 @@
             <column name="name" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="description" type="TEXT"/>
-            <column name="icon" type="VARCHAR(500)"/>
-            <column name="requirement_xp" type="INTEGER">
-                <constraints nullable="false"/>
-            </column>
-            <column name="created_at" type="TIMESTAMP" defaultValueComputed="now()">
+            <column name="criterion" type="VARCHAR(500)">
                 <constraints nullable="false"/>
             </column>
         </createTable>
+
+        <insert tableName="achievements">
+            <column name="id" value="f1a2b3c4-d5e6-7890-abcd-ef1234567801"/>
+            <column name="name" value="Primeiro Check-in"/>
+            <column name="criterion" value="Confirmou presença em uma atividade pela primeira vez"/>
+        </insert>
+        <insert tableName="achievements">
+            <column name="id" value="f2a3b4c5-d6e7-8901-bcde-f12345678902"/>
+            <column name="name" value="Criador de Atividades"/>
+            <column name="criterion" value="Criou uma atividade pela primeira vez"/>
+        </insert>
+        <insert tableName="achievements">
+            <column name="id" value="f3a4b5c6-d7e8-9012-cdef-123456789003"/>
+            <column name="name" value="Atividade Concluída"/>
+            <column name="criterion" value="Concluiu uma atividade pela primeira vez"/>
+        </insert>
+        <insert tableName="achievements">
+            <column name="id" value="f4a5b6c7-d8e9-0123-defa-234567890004"/>
+            <column name="name" value="Subiu de Nível"/>
+            <column name="criterion" value="Subiu de nível pela primeira vez"/>
+        </insert>
+        <insert tableName="achievements">
+            <column name="id" value="f5a6b7c8-d9e0-1234-efab-345678900005"/>
+            <column name="name" value="Nova Foto"/>
+            <column name="criterion" value="Alterou a foto de perfil pela primeira vez"/>
+        </insert>
     </changeSet>
 
 </databaseChangeLog>

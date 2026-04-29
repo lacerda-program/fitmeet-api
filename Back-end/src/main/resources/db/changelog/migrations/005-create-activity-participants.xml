@@ -20,13 +20,10 @@
                              foreignKeyName="fk_participants_user"
                              references="users(id)"/>
             </column>
-            <column name="status" type="VARCHAR(50)" defaultValue="ENROLLED">
+            <column name="approved" type="BOOLEAN" defaultValueBoolean="false">
                 <constraints nullable="false"/>
             </column>
-            <column name="enrolled_at" type="TIMESTAMP" defaultValueComputed="now()">
-                <constraints nullable="false"/>
-            </column>
-            <column name="completed_at" type="TIMESTAMP"/>
+            <column name="confirmed_at" type="TIMESTAMP"/>
         </createTable>
     </changeSet>
 
