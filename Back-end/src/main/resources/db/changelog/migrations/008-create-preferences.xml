@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="008" author="samuel">
+        <createTable tableName="preferences">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="UUID">
+                <constraints nullable="false"
+                             foreignKeyName="fk_preferences_user"
+                             references="users(id)"/>
+            </column>
+            <column name="type_id" type="UUID">
+                <constraints nullable="false"
+                             foreignKeyName="fk_preferences_type"
+                             references="activity_types(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,18 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <include file="db/changelog/migrations/001-create-users.xml"/>
+    <include file="db/changelog/migrations/002-create-activity-types.xml"/>
+    <include file="db/changelog/migrations/003-create-activities.xml"/>
+    <include file="db/changelog/migrations/004-create-activity-addresses.xml"/>
+    <include file="db/changelog/migrations/005-create-activity-participants.xml"/>
+    <include file="db/changelog/migrations/006-create-achievements.xml"/>
+    <include file="db/changelog/migrations/007-create-user-achievements.xml"/>
+    <include file="db/changelog/migrations/008-create-preferences.xml"/>
+
+</databaseChangeLog>
