@@ -4,7 +4,7 @@ services:
     image: postgres:16
     container_name: bootcamp_postgres
     environment:
-      POSTGRES_DB: bootcamp_db
+      POSTGRES_DB: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
