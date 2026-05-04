@@ -1,29 +1,41 @@
+
+
 services:
 
   postgres:
     image: postgres:16
     container_name: bootcamp_postgres
+    restart: unless-stopped
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+      POSTGRES_INITDB_ARGS: "-c shared_buffers=256MB -c max_connections=100"
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   localstack:
     image: localstack/localstack:3.4
     container_name: bootcamp_localstack
+    restart: unless-stopped
     environment:
       - SERVICES=s3
       - DEFAULT_REGION=us-east-1
       - AWS_ACCESS_KEY_ID=test
       - AWS_SECRET_ACCESS_KEY=test
+      - DEBUG=1
     ports:
       - "4566:4566"
     volumes:
       - localstack_data:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
   postgres_data:

@@ -19,30 +19,51 @@
 
         <insert tableName="activity_types">
             <column name="id" value="a1b2c3d4-e5f6-7890-abcd-ef1234567890"/>
+<<<<<<< HEAD
             <column name="name" value="Futebol"/>
             <column name="description" value="Atividades relacionadas ao futebol"/>
+=======
+            <column name="name" value="Esportes"/>
+            <column name="description" value="Atividades esportivas em geral"/>
+>>>>>>> 4aae60957980d618f55f3242b06633f9ba8e13fc
             <column name="image" value=""/>
         </insert>
         <insert tableName="activity_types">
             <column name="id" value="b2c3d4e5-f6a7-8901-bcde-f12345678901"/>
+<<<<<<< HEAD
             <column name="name" value="Basquete"/>
             <column name="description" value="Atividades relacionadas ao basquete"/>
+=======
+            <column name="name" value="Tecnologia"/>
+            <column name="description" value="Atividades relacionadas à tecnologia"/>
+>>>>>>> 4aae60957980d618f55f3242b06633f9ba8e13fc
             <column name="image" value=""/>
         </insert>
         <insert tableName="activity_types">
             <column name="id" value="c3d4e5f6-a7b8-9012-cdef-123456789012"/>
+<<<<<<< HEAD
             <column name="name" value="Caminhada"/>
             <column name="description" value="Atividades de caminhada e trilhas"/>
+=======
+            <column name="name" value="Arte e Cultura"/>
+            <column name="description" value="Atividades artísticas e culturais"/>
+>>>>>>> 4aae60957980d618f55f3242b06633f9ba8e13fc
             <column name="image" value=""/>
         </insert>
         <insert tableName="activity_types">
             <column name="id" value="d4e5f6a7-b8c9-0123-defa-234567890123"/>
+<<<<<<< HEAD
             <column name="name" value="Vôlei"/>
             <column name="description" value="Atividades relacionadas ao vôlei"/>
+=======
+            <column name="name" value="Saúde e Bem-estar"/>
+            <column name="description" value="Atividades voltadas para saúde e bem-estar"/>
+>>>>>>> 4aae60957980d618f55f3242b06633f9ba8e13fc
             <column name="image" value=""/>
         </insert>
         <insert tableName="activity_types">
             <column name="id" value="e5f6a7b8-c9d0-1234-efab-345678901234"/>
+<<<<<<< HEAD
             <column name="name" value="Corrida"/>
             <column name="description" value="Atividades de corrida e atletismo"/>
             <column name="image" value=""/>
@@ -69,6 +90,10 @@
             <column name="id" value="c9d0e1f2-a3b4-5678-cdef-789012345678"/>
             <column name="name" value="Tênis"/>
             <column name="description" value="Atividades relacionadas ao tênis"/>
+=======
+            <column name="name" value="Educação"/>
+            <column name="description" value="Atividades educacionais e de aprendizado"/>
+>>>>>>> 4aae60957980d618f55f3242b06633f9ba8e13fc
             <column name="image" value=""/>
         </insert>
     </changeSet>
