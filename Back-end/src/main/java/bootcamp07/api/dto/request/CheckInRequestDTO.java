@@ -1,12 +1,17 @@
 package bootcamp07.api.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 public class CheckInRequestDTO {
+
     @NotBlank(message = "Informe os campos obrigatórios corretamente.")
-    private String comment;
+    private String confirmationCode;
+
+    public String getConfirmationCode() {
+        return confirmationCode;
+    }
+
+    public void setConfirmationCode(String confirmationCode) {
+        this.confirmationCode = confirmationCode;
+    }
 }
